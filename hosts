@@ -1,0 +1,8 @@
+# Deploy OpenStack All-In-One - Liberty
+
+[openstack_host]
+192.168.56.101
+
+[openstack_host:vars]
+ansible_password=123456
+

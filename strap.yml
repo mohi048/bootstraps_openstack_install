@@ -1,0 +1,5 @@
+---
+  - hosts: openstack_host
+    user: root
+    roles:
+        - bootstrap_system
