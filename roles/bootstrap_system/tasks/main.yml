@@ -18,13 +18,8 @@
        - git
 
 
-- name: "Creating repository file"
-  file: path=/etc/apt/sources.list.d/cloudarchive-liberty.list state=touch
-
-
-- name: "Pushing liberty repository"
-  copy: content={{ liberty_url }} dest="/etc/apt/sources.list.d/cloudarchive-liberty.list"
-
+- name: "Adding Mitaka Repository"
+  shell: add-apt-repository -y cloud-archive:mitaka
 
 - name: "Performing update"
   apt:
