@@ -19,11 +19,11 @@
 
 
 - name: "Creating repository file"
-  file: path=/etc/apt/sources.list.d/cloudarchive-juno.list state=touch
+  file: path=/etc/apt/sources.list.d/cloudarchive-kilo.list state=touch
 
 
-- name: "Pushing juno repository"
-  copy: content={{ juno_url }} dest="/etc/apt/sources.list.d/cloudarchive-juno.list"
+- name: "Pushing kilo repository"
+  copy: content={{ kilo_url }} dest="/etc/apt/sources.list.d/cloudarchive-kilo.list"
 
 
 - name: "Performing update"
