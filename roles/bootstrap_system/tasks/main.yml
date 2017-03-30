@@ -102,14 +102,6 @@
 - debug: msg="{{netmask_internet_interface_output.stdout}}"
 
 
-#- name: Checking rc.local file
-#  command: grep -i "ifconfig" /etc/rc.local
-#  register: checkrclocal
-#  always_run: True
-#  ignore_errors: True
-#  changed_when: False
-
-
 - name: "Checking rc.local file"
   lineinfile: dest=/etc/rc.local line="{{item}}"
   with_items:
